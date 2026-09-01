@@ -20,7 +20,7 @@ greenlet>=3.0.0
 torch>=2.2.0
 transformers>=4.38.0
 sentence-transformers>=2.5.0
-numpy>=1.26.0
+numpy>=2.5.2
 scikit-learn>=1.4.0
 onnxruntime>=1.17.0
 
