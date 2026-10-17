@@ -19,6 +19,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "protocol"))
 
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 from dms.sim import topology as topo  # noqa: E402
 from dms.sim.multihop import ListSink, MultihopRun  # noqa: E402
 
